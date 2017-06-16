@@ -15,11 +15,15 @@
 
 <style lang="scss" scoped="">
   .container {
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 60px;
     line-height: 60px;
+    width: 100%;
     background-color: rgba(38, 50, 57, .6);
     .header {
-      margin: 0 200px;
+      margin: 0 20%;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
