@@ -23,10 +23,15 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src')
+      // 'common': path.resolve(__dirname, '../src/common')
     }
   },
   module: {
     rules: [
+      {
+        test: /\.styl$/,
+        loader: 'style-loader!css-loader!stylus-loader',
+      },
       {
         test: /\.(scss|sass)$/,
         loader: 'style-loader!css-loader!sass-loader',
