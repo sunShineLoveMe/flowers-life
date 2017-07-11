@@ -32,7 +32,10 @@
     <div v-show="detailShow" class="detail">
       <div class="detail-wrapper clearfix">
         <div class="detail-main">
-          {{seller.bulletin}}
+          <h1 class="name">{{seller.name}}</h1>
+          <div class="star-wrapper">
+            <star :size="48" :score="seller.score"></star>
+          </div>
         </div>
       </div>
       <div class="detail-close">
@@ -43,7 +46,8 @@
 </template>
 
 <script>
-  
+  import star from '../star/star';
+
   export default {
     props: {
       seller: {
@@ -62,6 +66,9 @@
       showDetail() {
         this.detailShow = true;
       },
+    },
+    components: {
+      star,
     },
   };
 </script>
@@ -192,9 +199,19 @@
       background-color: rgba(7, 17, 27, .8)
       .detail-wrapper
         min-height: 100%
+        width: 100%
+        // text-align: center
         .detail-main
           margin-top: 64px
           padding-bottom: 64px
+          .name
+            font-size: 16px
+            font-weight: 700
+            text-align: center
+            line-height: 16px
+          .star-wrapper
+            text-align: center;
+            margin-top: 18px;
       .detail-close
         position: relative
         width: 32px
