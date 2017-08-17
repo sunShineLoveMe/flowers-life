@@ -222,6 +222,7 @@
       left: 0
       background: rgba(7, 17, 27, .8)
       transition: all 0.5s
+      z-index: 1
       &.fade-transition
         opacity: 1
         background: rgba(7, 17, 27, .8)
